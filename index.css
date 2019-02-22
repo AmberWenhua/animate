@@ -1,0 +1,136 @@
+.divBox {
+  width: 59vw;
+  height: 70vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.fly {
+    width: 33vh;
+    height: 39vh;
+    position: absolute;
+    top: 6vh;
+    left: 6vw;
+    animation: go2 4s infinite alternate;
+    background: url('img/fly_1.png') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+.bgc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	cursor: pointer;
+    animation: go 4s infinite alternate;
+  }
+
+.contentBox {
+  width: 59vw;
+  height: 70vh;
+  margin: 0 auto;
+  background: url('img/first_2.png') no-repeat 0 0;
+  background-size: 100% auto;
+  background-size: auto 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.textBox {
+  width: 59vw;
+  height: 20vh;
+  margin: 0 auto;
+}
+
+.textBox p{
+   cursor: pointer;
+}
+.textBox p audio{
+   display: none;
+}
+.textBox p span{
+   color: green;
+}
+.textBox p span:hover{
+   color: red;
+}
+
+
+.boy {
+    width: 29vh;
+    height: 52vh;
+    position: absolute;
+    top: 8vh;
+    left: 16vw;
+  }
+  .girl {
+    width: 34vh;
+    height: 63vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('img/gril.png') no-repeat 0 0;
+    background-size: 100% auto;
+    background-size: auto 100%;
+  }
+.hello {
+	display: none;
+    width: 40vh;
+    height: 28vh;
+    position: absolute;
+    top: 0;
+    right: 9vw;
+    background: url('img/hello.png') no-repeat 0 0;
+    background-size: 100% auto;
+    background-size: auto 100%;
+  }
+  .box {
+  display: none;
+    width: 8vh;
+    height: 11vh;
+    position: absolute;
+    top: 3vh;
+    left: 20vw;
+    background: url('img/1.png') no-repeat 0 0;
+    background-size: 100% auto;
+    background-size: auto 100%;
+  }
+@keyframes go {
+  0% {
+    background: url('img/b_3.png') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  50% {
+    background: url('img/b_2.png') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  100% {
+    background: url('img/b_1.png') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes go2 {
+  from {
+    top: 2vh;
+    left: 4vw;
+  }
+
+  to {
+    top: 4vh;
+    left: 5vw;
+  }
+}
+@keyframes go3 {
+  50% {
+    left: 79vw;
+  }
+
+  100% {
+    left: 93vw;
+  }
+}

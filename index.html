@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="divBox">
+  <div class="bgc" onclick="playImportant()"></div>
+  <div class="fly"></div>
+  <div class="contentBox">
+    <div class="boy" onclick="showWhy()"></div>
+    <div class="girl" onclick="showHello()"></div>
+    <div class="hello"></div>
+    <div class="box"></div>
+  </div>
+</div>
+<div class="textBox">
+  <p onclick="playEnglish()">
+    成功的秘诀在于如何自始至终坚持做一件事。
+    <audio src="chinese.wav" controls="controls" id="audio"></audio>
+    <audio src="english.wav" controls="controls" id="audio_1"></audio>
+  </p>
+  <p>The secret of success is how to do one thing <span onclick="playImportant()">consistently</span> from beginning to end.</p>
+</div>
+
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    function playEnglish() {
+		var myVideo = document.getElementById('audio');
+		myVideo.play();
+		$('.girl').animate({right: '-34vw'}, 10000);
+		$('.hello').css('display', 'none');
+		$('.box').css('display', 'none');
+	}
+	function showHello() {
+		$('.hello').css('display', 'block');
+		const myVideo = document.getElementById('audio_1');
+		myVideo.play();
+	}
+	function showWhy() {
+		$('.box').css('display', 'block');
+	}
+	function playImportant() {
+		$('.bgc').css('animation',"none");
+		$('.bgc').css('background',"url('img/b_1.png') no-repeat 0 0");
+		$('.bgc').css('background-size',"100% 100%");
+		setTimeout(()=>{
+			$('.bgc').css('animation',"go 4s infinite alternate");
+		},2000);
+	}
+</script>
+</html>
